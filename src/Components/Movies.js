@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 function Movies({ movie }) {
-    console.log(movie);
     return (
         <li className="movie">
             <Link to={`/${movie.id}`}>

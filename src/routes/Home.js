@@ -22,7 +22,7 @@ function Home({ loadMovies }) {
         getMovies();
     }, []);
     return (
-        <div className="container">
+        <>
             {isloading ? (
                 <ul className="movies">
                     {movie.length > 0 &&
@@ -34,7 +34,7 @@ function Home({ loadMovies }) {
                         <span className="loading_text">Loading...</span>
                     </div>
                 )}
-        </div>
+        </>
     )
 }
 
