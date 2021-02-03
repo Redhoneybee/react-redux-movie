@@ -3,6 +3,9 @@ import axios from 'axios';
 import { addMovie } from '../store';
 import { connect } from 'react-redux';
 
+import '../global.css';
+import '../main.css'
+
 import Movies from '../Components/Movies';
 
 function Home({ loadMovies }) {
@@ -21,14 +24,14 @@ function Home({ loadMovies }) {
     return (
         <div className="container">
             {isloading ? (
-                <ul>
+                <ul className="movies">
                     {movie.length > 0 &&
                         movie.map((data, index) => <Movies key={index} movie={data} />)
                     }
                 </ul>
             ) : (
-                    <div>
-                        <span>Loading...</span>
+                    <div className="loading flex">
+                        <span className="loading_text">Loading...</span>
                     </div>
                 )}
         </div>

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color : #eff3f7;
+}
+
+html,
+body,
+#root,
+.container{
+    height : 100%;
+}
+
+.loading {
+    height : 100%;
+}
+.loading .loading_text {
+    font-size : 24px; 
+    font-weight : bold;
+    animation : loading 1s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction:  alternate;
+}
+
+.movies {
+    margin : 0 auto;
+    width : 80%;
+    display : flex;
+    justify-content: space-between;
+    flex-wrap : wrap;
+    align-items: flex-start;
+    padding : 50px;
+    padding-top : 150px;
+}
+.movies .movie{
+    position : relative;
+    width : 45%;
+    background-color : #fff;
+    margin-bottom : 120px; 
+    box-shadow : 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+        0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+
+    cursor : pointer;
+    -webkit-transition : .3s ease-in;
+    transition : .3s ease-in;
+}
+.movies .movie a{
+    display : flex;
+    justify-content: space-between;
+    align-items : flex-start;
+}
+.movie:hover{
+    box-shadow: none;
+}
+.movie .movie_image{
+    position : relative;
+    top : -85px;
+    margin-right : 40px;
+    max-width : 120px;
+    box-shadow : 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    left : 20px;
+}
+
+.movie_contents .movie_top{
+    display :Flex;
+    flex-direction: row;
+    margin-top : 10px;
+}
+.movie_top .movie_title{
+    font-size : 18px;
+    font-weight : 600;
+    margin-right : 10px;
+}
+.movie_top .movie_year{
+    position : relative;
+    font-size : 14px;
+    top : 3px;
+}
+
+.movie_contents .movie_genres{
+    display : flex; 
+    flex-direction: row;
+    margin-top : 10px;
+    margin-bottom : 20px;
+}
+.movie_genres .genre{
+    margin-right : 10px;
+    font-size : 14px;
+}
+
+.movie_contents .movie_summary{
+    font-size : 16px;
+    line-height: 18px;
+}
+@keyframes loading {
+    from{
+        opacity : 1;
+    }to{
+        opacity : 0;
+    }
+}
